@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -62,6 +63,24 @@ namespace HashTableLib
             get
             {
                 return _array.Length;
+            }
+        }
+
+        public IEnumerable<TKey> Keys
+        {
+            get
+            {
+                return from pairArray in _array where pairArray != null 
+                       from item in pairArray.Items select item.Key;
+            }
+        }
+
+        public IEnumerable<TValue> Values
+        {
+            get
+            {
+                return from pairArray in _array where pairArray != null
+                       from item in pairArray.Items select item.Value;
             }
         }
     }

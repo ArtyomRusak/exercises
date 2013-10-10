@@ -18,6 +18,8 @@ namespace Client
             hash.Add(10, "Hello, Artyom!");
             hash.Add(i, "wfwf");
 
+            var sdf = hash.Keys.ToList();
+
             Console.WriteLine(hash.GetValue(i));
         }
     }

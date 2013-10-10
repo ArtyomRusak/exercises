@@ -56,5 +56,21 @@ namespace HashTableLib
                 return _array.GetValue(key);
             }
         }
+
+        public IEnumerable<TKey> Keys
+        {
+            get
+            {
+                return _array.Keys;
+            }
+        }
+
+        public IEnumerable<TValue> Values
+        {
+            get
+            {
+                return _array.Values;
+            }
+        } 
     }
 }

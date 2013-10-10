@@ -56,5 +56,21 @@ namespace HashTableLib
                 return _pairs;
             }
         }
+
+        public IEnumerable<TKey> Keys
+        {
+            get
+            {
+                return _pairs.Select(pair => pair.Key);
+            }
+        }
+
+        public IEnumerable<TValue> Values
+        {
+            get
+            {
+                return _pairs.Select(pair => pair.Value);
+            }
+        }
     }
 }
