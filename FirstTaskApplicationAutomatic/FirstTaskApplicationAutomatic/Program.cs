@@ -84,7 +84,7 @@ namespace FirstTaskApplicationAutomatic
 
                 using (writer = new StreamWriter(name, true))
                 {
-                    writer.WriteLine("Array size - {0}, average time - {1}", sizeOfArray, ticks.Average());
+                    writer.WriteLine("Array size - {0}, average time - {1} ticks.", sizeOfArray, ticks.Average());
                 }
             }
         }
